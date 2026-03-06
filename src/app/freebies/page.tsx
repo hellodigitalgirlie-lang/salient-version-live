@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link"; // <-- Added Next.js Link import
 
 const freebies = [
   {
@@ -34,7 +35,7 @@ const tips = [
     number: "01",
     title: "Optimize Your Headline",
     description:
-      "Your headline is prime real estate. Go beyond your job title\u2014include keywords, your value prop, and a hint of personality.",
+      "Your headline is prime real estate. Go beyond your job title—include keywords, your value prop, and a hint of personality.",
   },
   {
     number: "02",
@@ -52,13 +53,13 @@ const tips = [
     number: "04",
     title: "Engage Before You Post",
     description:
-      "Spend 10\u201315 minutes commenting on others\u2019 posts before publishing your own. The algorithm rewards engagement.",
+      "Spend 10–15 minutes commenting on others’ posts before publishing your own. The algorithm rewards engagement.",
   },
   {
     number: "05",
     title: "Post Consistently",
     description:
-      "Aim for 2\u20133 posts per week. Mix personal stories, industry insights, and actionable tips to keep your audience engaged.",
+      "Aim for 2–3 posts per week. Mix personal stories, industry insights, and actionable tips to keep your audience engaged.",
   },
   {
     number: "06",
@@ -80,7 +81,7 @@ export default function FreebiesPage() {
   };
 
   return (
-    <main className="pt-24 pb-16">
+    <div className="pb-16">
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-gray-900 text-white">
         <div
@@ -160,14 +161,15 @@ export default function FreebiesPage() {
                   <p className="mt-2 text-sm leading-relaxed text-gray-600">
                     {item.description}
                   </p>
-                  <button
+                  {/* Routed this to /contact instead of downloading a file */}
+                  <Link
+                    href="/contact"
                     className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-pink-500 transition-colors hover:text-pink-600"
-                    type="button"
                   >
-                    Download Free
+                    Request free copy
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      className="h-4 w-4"
+                      className="h-4 w-4 transition-transform group-hover:translate-x-1"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -176,10 +178,10 @@ export default function FreebiesPage() {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
                       />
                     </svg>
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -267,13 +269,13 @@ export default function FreebiesPage() {
 
           <p className="mt-6 text-xs text-gray-500">
             Or{" "}
-            <a href="#" className="text-pink-400 underline hover:text-pink-300">
+            <a href="https://www.linkedin.com/in/thedigitalgirlie/" className="text-pink-400 underline hover:text-pink-300">
               follow me on LinkedIn
             </a>{" "}
             to stay in the loop.
           </p>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
