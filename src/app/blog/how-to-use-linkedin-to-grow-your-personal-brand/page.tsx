@@ -1,58 +1,12 @@
 import Link from "next/link";
 
-const sections = [
-  {
-    num: "01",
-    title: "Start with a Standout Profile",
-    body: "Think of your profile as your personal storefront. A professional headshot, compelling headline, and summary that tells your story\u2014not just your job title\u2014are essential. Your \u201CAbout\u201D section should highlight your expertise, values, and the unique perspective you bring, written in a voice that feels authentic. (Do NOT flex AI for this.)",
-  },
-  {
-    num: "02",
-    title: "Showcase Your Expertise",
-    body: "Your activity shapes your reputation. Share insights, write original posts, and engage in meaningful conversations. Comment thoughtfully on others\u2019 content and offer genuine value, not just self-promotion. Consistency is key.",
-  },
-  {
-    num: "03",
-    title: "Use Content to Tell Your Story",
-    body: "Mix content types to keep your audience engaged: short posts for quick takeaways or reflections, articles for in-depth industry analysis or thought leadership, and multimedia such as videos, slides, or infographics for visual appeal. Each piece should reflect your brand\u2019s voice and align with the professional image you want to build.",
-  },
-  {
-    num: "04",
-    title: "Build a Strategic Network",
-    body: "It\u2019s not just about adding connections, it\u2019s about cultivating the right ones. Follow leaders in your industry, connect with peers, and engage with potential mentors, collaborators, or clients. Send personalized connection requests explaining why you\u2019d like to connect\u2014DO NOT rely on the auto-generated message from LinkedIn.",
-  },
-  {
-    num: "05",
-    title: "Leverage Recommendations & Endorsements",
-    body: "Ask colleagues, clients, and managers to write LinkedIn recommendations that highlight your skills and contributions. These serve as public testimonials that strengthen your credibility and give your profile social proof.",
-  },
-  {
-    num: "06",
-    title: "Stay Visible and Relevant",
-    body: "The LinkedIn algorithm rewards consistent, authentic engagement. Respond to comments on your posts, congratulate others on their successes, and participate in relevant group discussions. The more active you are, the more opportunities your name has to appear in the right feeds.",
-  },
-];
-
-const tags = [
-  "Personal Branding",
-  "Resume Writing",
-  "LinkedIn Tips",
-  "Career Growth",
-  "Thought Leadership",
-  "Networking",
-  "Brand Strategy",
-  "Social Selling",
-  "Content Strategy",
-  "Career Success",
-];
-
-export default function PersonalBrandPost() {
+export default function WeakTiesPost() {
   return (
-    <main className="pt-24 pb-16">
+    <div className="pb-16">
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-gray-50">
         <div
-          className="absolute -top-32 -left-32 h-96 w-96 rounded-full opacity-25 blur-3xl"
+          className="absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-25 blur-3xl"
           style={{ background: "oklch(89.2% 0.058 10.001)" }}
         />
         <div className="relative mx-auto max-w-3xl px-6 py-20 sm:py-28">
@@ -77,80 +31,240 @@ export default function PersonalBrandPost() {
             Back to Blog
           </Link>
           <div className="mt-6 flex items-center gap-3 text-xs text-gray-400">
-            <time>Aug 14</time>
+            <time>Sep 8</time>
             <span className="h-1 w-1 rounded-full bg-gray-300" />
-            <span>5 min read</span>
+            <span>7 min read</span>
           </div>
           <h1 className="mt-4 text-3xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
-            How to Use LinkedIn to Grow Your{" "}
+            The Subtle Strength of{" "}
             <span className="bg-gradient-to-r from-pink-500 to-rose-400 bg-clip-text text-transparent">
-              Personal Brand
+              Weak Ties
             </span>
           </h1>
-        </div>
-      </section>
-
-      {/* ── Article ── */}
-      <article className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
-        <div className="space-y-8 text-base leading-relaxed text-gray-600">
-          <p>
-            In today&apos;s professional world, your personal brand is your
-            career currency, and LinkedIn is the perfect platform to invest it
-            wisely. Whether you&apos;re job hunting, pivoting careers, growing a
-            business, or becoming a recognized voice in your field, LinkedIn
-            offers unmatched visibility, credibility, and networking potential.
-          </p>
-
-          {/* Steps */}
-          <div className="space-y-6">
-            {sections.map((section) => (
-              <div
-                key={section.num}
-                className="group rounded-2xl border border-gray-200 bg-white p-7 shadow-sm transition-all hover:border-pink-200 hover:shadow-md"
-              >
-                <div className="flex items-start gap-4">
-                  <span className="shrink-0 text-3xl font-extrabold text-pink-200 transition-colors group-hover:text-pink-400">
-                    {section.num}
-                  </span>
-                  <div>
-                    <h2 className="text-lg font-bold text-gray-900">
-                      {section.title}
-                    </h2>
-                    <p className="mt-3 text-sm leading-relaxed text-gray-600">
-                      {section.body}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* Bottom Line */}
-          <div className="rounded-2xl bg-gray-900 p-8 text-white">
-            <p className="text-sm font-semibold uppercase tracking-[0.15em] text-pink-400">
-              Bottom Line
-            </p>
-            <p className="mt-3 leading-relaxed text-gray-300">
-              Your personal brand is built over time through the stories you
-              tell, the value you provide, and the relationships you nurture.
-              LinkedIn isn&apos;t just a resume\u2014it&apos;s your professional
-              stage.{" "}
-              <span className="font-semibold text-white">
-                Show up, contribute, and let your brand shine.
-              </span>
-            </p>
-          </div>
-
-          {/* Tags */}
-          <div className="flex flex-wrap gap-2 pt-4">
-            {tags.map((tag) => (
+          <div className="mt-5 flex flex-wrap gap-2">
+            {["Networking", "LinkedIn Strategy", "Career Growth"].map((tag) => (
               <span
                 key={tag}
-                className="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-500"
+                className="rounded-full bg-pink-50 px-3 py-1 text-xs font-medium text-pink-600"
               >
                 {tag}
               </span>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Article Body ── */}
+      <article className="mx-auto max-w-3xl px-6 py-16 sm:py-20">
+        <div className="space-y-8 text-base leading-relaxed text-gray-600">
+          <p>
+            The concept of weak ties was first articulated by Harvard
+            sociologist Mark Granovetter in his landmark 1973 paper{" "}
+            <em>&quot;The Strength of Weak Ties.&quot;</em> Granovetter found
+            that casual acquaintances; those people you don&apos;t interact
+            with often are often more powerful than close friends when it
+            comes to new information and opportunities. In fact, they connect you
+            to networks beyond your usual circle.
+          </p>
+
+          {/* Why Weak Ties Matter */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Why Weak Ties Matter
+            </h2>
+            <div className="mt-6 space-y-5">
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 className="font-bold text-gray-900">
+                  Access to Novel Information
+                </h3>
+                <p className="mt-2 text-sm text-gray-600">
+                  Strong ties tend to move in the same circles and share similar
+                  information, while weak ties bring fresh insights and resources
+                  you wouldn&apos;t otherwise encounter.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 className="font-bold text-gray-900">
+                  Career &amp; Mobility Boosts
+                </h3>
+                <p className="mt-2 text-sm text-gray-600">
+                  Studies consistently show that weak ties play a decisive role
+                  in job searches. Granovetter&apos;s original findings revealed
+                  that acquaintances have historically been more helpful for
+                  employment connections than close friends.
+                </p>
+              </div>
+              <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                <h3 className="font-bold text-gray-900">
+                  Digital Era Relevance
+                </h3>
+                <p className="mt-2 text-sm text-gray-600">
+                  Analysis of vast LinkedIn data shows weak ties, particularly
+                  in more digitally-intensive industries, are especially valuable
+                  for surfacing new opportunities.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Beyond Jobs */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Beyond Jobs=Broader Benefits
+            </h2>
+            <div className="mt-6 grid gap-5 sm:grid-cols-3">
+              {[
+                {
+                  icon: "🧠",
+                  title: "Mental Health & Belonging",
+                  text: "Casual interactions:like chatting with a barista or joining a community group;can enhance well-being, lower depression, and foster gratitude and belonging.",
+                },
+                {
+                  icon: "💡",
+                  title: "Creativity & Innovation",
+                  text: "In open-source development, developers engaging lightly across varied projects via weak ties were more likely to launch novel, creative projects.",
+                },
+                {
+                  icon: "📡",
+                  title: "Information Diffusion",
+                  text: "Although strong ties individually influence more, the sheer volume of weak ties drives most new information to spread across networks.",
+                },
+              ].map((item) => (
+                <div
+                  key={item.title}
+                  className="rounded-2xl border border-gray-100 bg-gray-50 p-5"
+                >
+                  <span className="text-2xl">{item.icon}</span>
+                  <h3 className="mt-2 text-sm font-bold text-gray-900">
+                    {item.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-gray-600">
+                    {item.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Why Effective */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Why Weak Ties Are Effective
+            </h2>
+            <div className="mt-6 space-y-4">
+              <p>
+                <span className="font-semibold text-gray-900">
+                  Bridging Diverse Circles:
+                </span>{" "}
+                Weak ties link disconnected groups;acting as social
+                bridges: thus enabling access to different pools of
+                information and opportunity.
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900">
+                  Avoiding Echo Chambers:
+                </span>{" "}
+                Strong ties can foster insular networks; weak ties counter this,
+                helping us see beyond our own echo chambers and filter bubbles.
+              </p>
+              <p>
+                Granovetter himself acknowledged strong ties still
+                matter, for motivational support or emotional depth, but
+                weak ties uniquely broaden our horizons.
+              </p>
+            </div>
+          </div>
+
+          {/* Challenges */}
+          <div
+            className="rounded-2xl p-8"
+            style={{
+              background:
+                "linear-gradient(135deg, oklch(89.2% 0.058 10.001 / 0.2), transparent)",
+            }}
+          >
+            <h2 className="text-2xl font-bold text-gray-900">
+              Challenges &amp; Nuance
+            </h2>
+            <div className="mt-4 space-y-4 text-sm">
+              <p>
+                <span className="font-semibold text-gray-900">
+                  Too Few or Too Weak:
+                </span>{" "}
+                The relationship between tie strength and job opportunities
+                might follow an inverted-U shape moderately weak ties are
+                especially effective; too many or too weak ties can reduce
+                returns.
+              </p>
+              <p>
+                <span className="font-semibold text-gray-900">
+                  Industry Differences:
+                </span>{" "}
+                Weak ties are particularly effective in digital or tech sectors,
+                whereas traditional industries might benefit more from stronger,
+                closer relationships.
+              </p>
+            </div>
+          </div>
+
+          {/* Tips */}
+          <div>
+            <h2 className="text-2xl font-bold text-gray-900">
+              Tips for Cultivating Weak Ties
+            </h2>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {[
+                {
+                  num: "01",
+                  title: "Be a “Regular”",
+                  text: "Frequenting the same café or joining local groups can create casual but meaningful connections.",
+                },
+                {
+                  num: "02",
+                  title: "Embrace Small Talk",
+                  text: "Seemingly trivial conversations can be the seeds of unexpected opportunity.",
+                },
+                {
+                  num: "03",
+                  title: "Accept New Connections",
+                  text: "On LinkedIn or Zoom, be open to broadening your network even if it feels shallow at first.",
+                },
+                {
+                  num: "04",
+                  title: "Diversify Digital Engagement",
+                  text: "Don’t just engage with your usual feed actively seek new voices to counter filter bubbles and algorithmic narrowing.",
+                },
+              ].map((tip) => (
+                <div
+                  key={tip.num}
+                  className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
+                >
+                  <span className="text-2xl font-extrabold text-pink-200">
+                    {tip.num}
+                  </span>
+                  <h3 className="mt-1 text-sm font-bold text-gray-900">
+                    {tip.title}
+                  </h3>
+                  <p className="mt-2 text-xs leading-relaxed text-gray-600">
+                    {tip.text}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Closing */}
+          <div className="rounded-2xl bg-gray-900 p-8 text-white">
+            <p className="text-base leading-relaxed text-gray-300">
+              Weak ties the acquaintances, the casual hellos, the
+              background flickers on social media might seem insignificant.
+              But they&apos;re often the unsung heroes of opportunity,
+              creativity, belonging, and growth. In a world shaped by complex
+              networks,{" "}
+              <span className="font-semibold text-pink-400">
+                even a small bridge can lead to entirely new worlds.
+              </span>
+            </p>
           </div>
         </div>
 
@@ -179,6 +293,6 @@ export default function PersonalBrandPost() {
           </Link>
         </div>
       </article>
-    </main>
+    </div>
   );
 }

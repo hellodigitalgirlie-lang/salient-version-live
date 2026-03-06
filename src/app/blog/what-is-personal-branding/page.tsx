@@ -10,7 +10,7 @@ const benefits = [
 
 export default function WhatIsPersonalBrandingPost() {
   return (
-    <main className="pt-24 pb-16">
+    <div className="pb-16">
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-gray-50">
         <div
@@ -71,13 +71,13 @@ export default function WhatIsPersonalBrandingPost() {
             </h2>
             <p className="mt-4">
               In today&apos;s competitive world, standing out is more than a
-              goal\u2014it&apos;s a necessity. That&apos;s where personal
+              goal it&apos;s a necessity. That&apos;s where personal
               branding comes in.
             </p>
             <p className="mt-4">
               Personal branding is the intentional effort to shape the way
               you&apos;re perceived by others. It&apos;s how you present your
-              skills, values, personality, and experience\u2014both online and in
+              skills, values, personality, and experience both online and in
               person. Just like a company brand, your personal brand tells people
               who you are, what you stand for, and what they can expect from
               working with you.
@@ -102,7 +102,7 @@ export default function WhatIsPersonalBrandingPost() {
               {benefits.map((benefit) => (
                 <div key={benefit} className="flex items-start gap-3">
                   <span className="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-pink-500/20 text-xs text-pink-500">
-                    \u2713
+                    ✓
                   </span>
                   <p className="text-sm font-medium text-gray-800">
                     {benefit}
@@ -115,7 +115,7 @@ export default function WhatIsPersonalBrandingPost() {
           <p>
             Whether you&apos;re a student, a professional, or an entrepreneur,
             personal branding gives you control over your narrative. It allows
-            you to authentically communicate your value\u2014and that can make
+            you to authentically communicate your value and that can make
             all the difference.
           </p>
 
@@ -158,6 +158,6 @@ export default function WhatIsPersonalBrandingPost() {
           </Link>
         </div>
       </article>
-    </main>
+    </div>
   );
 }

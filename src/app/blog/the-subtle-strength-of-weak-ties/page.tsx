@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function WeakTiesPost() {
   return (
-    <main className="pt-24 pb-16">
+    <div className="pb-16">
       {/* ── Hero ── */}
       <section className="relative overflow-hidden bg-gray-50">
         <div
@@ -61,8 +61,8 @@ export default function WeakTiesPost() {
             The concept of weak ties was first articulated by Harvard
             sociologist Mark Granovetter in his landmark 1973 paper{" "}
             <em>&quot;The Strength of Weak Ties.&quot;</em> Granovetter found
-            that casual acquaintances\u2014those people you don&apos;t interact
-            with often\u2014are often more powerful than close friends when it
+            that casual acquaintances—those people you don&apos;t interact
+            with often—are often more powerful than close friends when it
             comes to new information and opportunities. In fact, they connect you
             to networks beyond your usual circle.
           </p>
@@ -110,22 +110,22 @@ export default function WeakTiesPost() {
           {/* Beyond Jobs */}
           <div>
             <h2 className="text-2xl font-bold text-gray-900">
-              Beyond Jobs\u2014Broader Benefits
+              Beyond Jobs—Broader Benefits
             </h2>
             <div className="mt-6 grid gap-5 sm:grid-cols-3">
               {[
                 {
-                  icon: "\u{1F9E0}",
+                  icon: "🧠",
                   title: "Mental Health & Belonging",
-                  text: "Casual interactions\u2014like chatting with a barista or joining a community group\u2014can enhance well-being, lower depression, and foster gratitude and belonging.",
+                  text: "Casual interactions—like chatting with a barista or joining a community group—can enhance well-being, lower depression, and foster gratitude and belonging.",
                 },
                 {
-                  icon: "\u{1F4A1}",
+                  icon: "💡",
                   title: "Creativity & Innovation",
                   text: "In open-source development, developers engaging lightly across varied projects via weak ties were more likely to launch novel, creative projects.",
                 },
                 {
-                  icon: "\u{1F4E1}",
+                  icon: "📡",
                   title: "Information Diffusion",
                   text: "Although strong ties individually influence more, the sheer volume of weak ties drives most new information to spread across networks.",
                 },
@@ -156,8 +156,8 @@ export default function WeakTiesPost() {
                 <span className="font-semibold text-gray-900">
                   Bridging Diverse Circles:
                 </span>{" "}
-                Weak ties link disconnected groups\u2014acting as social
-                bridges\u2014thus enabling access to different pools of
+                Weak ties link disconnected groups—acting as social
+                bridges—thus enabling access to different pools of
                 information and opportunity.
               </p>
               <p>
@@ -169,7 +169,7 @@ export default function WeakTiesPost() {
               </p>
               <p>
                 Granovetter himself acknowledged strong ties still
-                matter\u2014for motivational support or emotional depth\u2014but
+                matter—for motivational support or emotional depth—but
                 weak ties uniquely broaden our horizons.
               </p>
             </div>
@@ -192,7 +192,7 @@ export default function WeakTiesPost() {
                   Too Few or Too Weak:
                 </span>{" "}
                 The relationship between tie strength and job opportunities
-                might follow an inverted-U shape\u2014moderately weak ties are
+                might follow an inverted-U shape—moderately weak ties are
                 especially effective; too many or too weak ties can reduce
                 returns.
               </p>
@@ -216,8 +216,8 @@ export default function WeakTiesPost() {
               {[
                 {
                   num: "01",
-                  title: "Be a \u201CRegular\u201D",
-                  text: "Frequenting the same caf\u00e9 or joining local groups can create casual but meaningful connections.",
+                  title: "Be a “Regular”",
+                  text: "Frequenting the same café or joining local groups can create casual but meaningful connections.",
                 },
                 {
                   num: "02",
@@ -227,12 +227,12 @@ export default function WeakTiesPost() {
                 {
                   num: "03",
                   title: "Accept New Connections",
-                  text: "On LinkedIn or Zoom, be open to broadening your network\u2014even if it feels shallow at first.",
+                  text: "On LinkedIn or Zoom, be open to broadening your network—even if it feels shallow at first.",
                 },
                 {
                   num: "04",
                   title: "Diversify Digital Engagement",
-                  text: "Don\u2019t just engage with your usual feed\u2014actively seek new voices to counter filter bubbles and algorithmic narrowing.",
+                  text: "Don’t just engage with your usual feed—actively seek new voices to counter filter bubbles and algorithmic narrowing.",
                 },
               ].map((tip) => (
                 <div
@@ -256,8 +256,8 @@ export default function WeakTiesPost() {
           {/* Closing */}
           <div className="rounded-2xl bg-gray-900 p-8 text-white">
             <p className="text-base leading-relaxed text-gray-300">
-              Weak ties\u2014the acquaintances, the casual hellos, the
-              background flickers on social media\u2014might seem insignificant.
+              Weak ties—the acquaintances, the casual hellos, the
+              background flickers on social media—might seem insignificant.
               But they&apos;re often the unsung heroes of opportunity,
               creativity, belonging, and growth. In a world shaped by complex
               networks,{" "}
@@ -293,6 +293,6 @@ export default function WeakTiesPost() {
           </Link>
         </div>
       </article>
-    </main>
+    </div>
   );
 }
