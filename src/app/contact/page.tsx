@@ -84,7 +84,7 @@ export default function ContactPage() {
                         <option>LinkedIn Profile Audit ($149)</option>
                         <option>Done-for-You Optimization ($399)</option>
                         <option>LinkedIn Power Hour ($250)</option>
-                        <option>Not sure yet — just exploring!</option>
+                        <option>Not sure yet...just exploring!</option>
                       </select>
                     </div>
                     <div>

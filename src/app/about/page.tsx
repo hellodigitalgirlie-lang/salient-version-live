@@ -1,152 +1,234 @@
 "use client";
 
-import Link from "next/link";
+import { useState, useEffect } from "react";
+
+const awards = [
+  { icon: "🏆", title: "Social Media Manager of the Year Finalist" },
+  { icon: "🏆", title: "EIMA Marketer of the Year" },
+  { icon: "🏆", title: "Digital Woman to Watch" },
+  { icon: "🏆", title: "Social Media Manager of the Year Runner Up" },
+  { icon: "⭐", title: "Dallas Meetup Featured Networker" },
+  { icon: "⭐", title: "Named Social Media Marketing Expert by Huffpost" },
+];
+
+const linkedinWins = [
+  "Land job offers without applying",
+  "Gain free access to major industry conferences",
+  "Win professional awards and recognition",
+  "Secure free continuing education and certifications",
+  "Build a network of high-impact connections across industries",
+];
 
 export default function AboutPage() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    setVisible(true);
+  }, []);
+
   return (
-    <>
-      <style jsx global>{`
-        @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes float { 0%, 100% { transform: translateY(0px) rotate(0deg); } 50% { transform: translateY(-20px) rotate(2deg); } }
-        @keyframes pulse-soft { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.7; } }
-        .animate-fade-up { animation: fadeUp 0.8s ease-out forwards; }
-        .animate-float { animation: float 6s ease-in-out infinite; }
-        .gradient-blob { position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.35; }
-        .glass-card { background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.5); }
-        .text-gradient { background: linear-gradient(135deg, #d44f2e, #e86a47, #f08b6e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-      `}</style>
+    <main className="pt-24 pb-16">
+      {/* ── Hero Section ── */}
+      <section className="relative overflow-hidden bg-gray-50">
+        <div
+          className="absolute -top-32 -right-32 h-96 w-96 rounded-full opacity-30 blur-3xl"
+          style={{ background: "oklch(89.2% 0.058 10.001)" }}
+        />
+        <div
+          className="absolute -bottom-24 -left-24 h-72 w-72 rounded-full opacity-20 blur-3xl"
+          style={{ background: "oklch(89.2% 0.058 10.001)" }}
+        />
 
-      {/* Hero */}
-      <section className="relative pt-32 pb-20 sm:pt-40 sm:pb-28 overflow-hidden">
-        <div className="gradient-blob w-[500px] h-[500px] bg-blush-200 -top-40 -right-40" style={{ position: "absolute" }} />
-        <div className="gradient-blob w-[400px] h-[400px] bg-sage-200 top-20 -left-20" style={{ position: "absolute", animationDelay: "2s" }} />
+        <div className="relative mx-auto max-w-5xl px-6 py-24 text-center sm:py-32">
+          <p
+            className={`mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-pink-500 transition-all duration-700 ${
+              visible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-4 opacity-0"
+            }`}
+          >
+            Meet Your LinkedIn Strategist
+          </p>
+          <h1
+            className={`text-4xl font-extrabold tracking-tight text-gray-900 transition-all delay-100 duration-700 sm:text-6xl ${
+              visible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-4 opacity-0"
+            }`}
+          >
+            Hi, I&apos;m Jessica
+            <span className="block bg-gradient-to-r from-pink-500 to-rose-400 bg-clip-text text-transparent">
+              &amp; I am the digital girlie.
+            </span>
+          </h1>
+          <p
+            className={`mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-gray-600 transition-all delay-200 duration-700 ${
+              visible
+                ? "translate-y-0 opacity-100"
+                : "translate-y-4 opacity-0"
+            }`}
+          >
+            I help professionals craft their personal brands and turn their
+            LinkedIn profiles into opportunity magnets.
+          </p>
+        </div>
+      </section>
 
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            {/* Image */}
-            <div className="relative animate-fade-up">
-              <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-sage-100 shadow-2xl shadow-sage-900/10">
-                <img
-                  src="https://images.squarespace-cdn.com/content/v1/684066d26fdac4230f2721d4/3db988a5-651d-45e8-a19f-aea471d2886e/DWA24.jpg"
-                  alt="Jessica - The Digital Girlie"
-                  className="size-full object-cover"
+      {/* ── Story Split Section ── */}
+      <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
+        <div className="grid items-center gap-16 lg:grid-cols-2">
+          {/* Image placeholder */}
+          <div className="relative">
+            <div
+              className="absolute -inset-4 rounded-3xl opacity-40 blur-2xl"
+              style={{ background: "oklch(89.2% 0.058 10.001)" }}
+            />
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 via-rose-50 to-white shadow-xl">
+              <div className="flex h-full flex-col items-center justify-center p-8 text-center">
+                <span className="mb-3 text-6xl">💅</span>
+                <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+                  Jessica
+                </p>
+                <p className="mt-1 text-xs text-gray-400">
+                  LinkedIn Consultant &amp; Brand Strategist
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Story content */}
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              15+ Years of Digital Marketing.
+              <br />
+              <span className="text-pink-500">Zero Fluff.</span>
+            </h2>
+            <p className="leading-relaxed text-gray-600">
+              With over 15 years of experience in digital marketing and a proven
+              track record of generating real-world results through LinkedIn I
+              combine strategy, storytelling, and personal branding to help job
+              seekers, entrepreneurs, and professionals stand out and get
+              noticed.
+            </p>
+            <p className="leading-relaxed text-gray-600">
+              Corporate girlie by day, I lead digital strategy at{" "}
+              <span className="font-semibold text-gray-900">Envoy Air</span>, an
+              American Airlines Group company developing integrated marketing
+              campaigns, managing digital presence and PR, and crafting content
+              that fuels talent acquisition and brand visibility.
+            </p>
+            <p className="leading-relaxed text-gray-600">
+              My foundation in marketing gives me a unique advantage as a
+              LinkedIn consultant: I understand not only how to write a strong
+              profile, but also how to position you strategically for visibility,
+              impact, and opportunity.
+            </p>
+            <p className="leading-relaxed text-gray-600">
+              Whether you&apos;re job hunting, pivoting careers, growing your
+              business, or building your personal brand, I&apos;ll help you
+              transform your profile into a tool that works for you.
+            </p>
+            <a
+              href="#"
+              className="mt-4 inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-pink-500/30"
+              style={{ background: "oklch(89.2% 0.058 10.001)" }}
+            >
+              <span className="text-gray-900">Let&apos;s Chat</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-4 w-4 text-gray-900"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17 8l4 4m0 0l-4 4m4-4H3"
                 />
-              </div>
-              <div className="absolute -bottom-6 -right-6 sm:bottom-8 sm:-right-8 glass-card rounded-2xl p-5 shadow-lg animate-float">
-                <div className="text-3xl mb-1">🏆</div>
-                <div className="text-sm font-semibold text-espresso">Marketer of the Year</div>
-                <div className="text-xs text-espresso/50">2025 EIMA Awards</div>
-              </div>
-            </div>
-
-            {/* Text */}
-            <div className="animate-fade-up" style={{ animationDelay: "0.2s" }}>
-              <p className="text-sm font-semibold text-blush-600 tracking-wide uppercase">Nice to meet you</p>
-              <h1 className="mt-3 font-display text-5xl sm:text-6xl tracking-tight text-espresso">
-                Hi, I&rsquo;m Jessica 👋
-              </h1>
-              <div className="mt-6 space-y-5 text-base text-espresso/70 leading-relaxed">
-                <p>
-                  I help professionals craft their personal brands and turn their LinkedIn profiles into opportunity magnets.
-                </p>
-                <p>
-                  With over <strong className="text-espresso font-semibold">15 years of experience</strong> in digital marketing&mdash;and a proven track record of generating real-world results through LinkedIn&mdash;I combine strategy, storytelling, and personal branding to help job seekers, entrepreneurs, and professionals stand out and get noticed.
-                </p>
-                <p>
-                  Corporate girlie by day, I lead digital strategy at Envoy Air, an American Airlines Group company&mdash;developing integrated marketing campaigns, managing digital presence and PR, and crafting content that fuels talent acquisition and brand visibility.
-                </p>
-                <p>
-                  My foundation in marketing gives me a unique advantage as a LinkedIn consultant: I understand not only how to write a strong profile, but also how to position you strategically for visibility, impact, and opportunity.
-                </p>
-              </div>
-            </div>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Why LinkedIn */}
-      <section className="py-24 sm:py-32 bg-espresso text-cream relative overflow-hidden">
-        <div className="gradient-blob w-[500px] h-[500px] bg-blush-800 top-0 left-1/3 opacity-20" style={{ position: "absolute" }} />
-
-        <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center">
-            <p className="text-sm font-semibold text-blush-400 tracking-wide uppercase">Why LinkedIn?</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl tracking-tight text-cream">
-              Because I&rsquo;ve used it to open doors
+      {/* ── Why LinkedIn Section ── */}
+      <section className="bg-gray-900 text-white">
+        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-pink-400">
+              Why LinkedIn?
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight sm:text-4xl">
+              I Don&apos;t Just Teach It.{" "}
+              <span className="text-pink-400">I Live It.</span>
             </h2>
-          </div>
-
-          <div className="mx-auto mt-16 max-w-3xl">
-            <div className="space-y-6">
-              {[
-                { icon: "✅", text: "Land job offers without applying" },
-                { icon: "✅", text: "Gain free access to major industry conferences" },
-                { icon: "✅", text: "Win professional awards and recognition" },
-                { icon: "✅", text: "Secure free continuing education and certifications (hi, Harvard! What, like it's hard?)" },
-                { icon: "✅", text: "Build a network of high-impact connections across industries" },
-              ].map((item, i) => (
-                <div key={i} className="flex gap-4 items-start rounded-2xl bg-white/5 p-6 ring-1 ring-white/10">
-                  <span className="text-2xl flex-none">{item.icon}</span>
-                  <p className="text-lg text-cream/80 font-medium">{item.text}</p>
-                </div>
-              ))}
-            </div>
-            <p className="mt-10 text-center text-cream/50 font-display text-xl italic">
-              I don&rsquo;t just teach LinkedIn strategy&mdash;I&rsquo;ve personally used it to open doors, build influence, and grow my career.
+            <p className="mx-auto mt-4 max-w-xl text-gray-400">
+              I&apos;ve personally used LinkedIn to open doors, build influence,
+              and grow my career. Here&apos;s what it&apos;s done for me:
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Awards */}
-      <section className="py-24 sm:py-32 bg-white">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:text-center mb-16">
-            <p className="text-sm font-semibold text-blush-600 tracking-wide uppercase">Awards &amp; Recognition</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl tracking-tight text-espresso">
-              Not just talk&mdash;results
-            </h2>
-          </div>
-
-          <div className="mx-auto max-w-3xl grid sm:grid-cols-2 gap-6">
-            {[
-              { icon: "🏆", title: "Social Media Manager of the Year Finalist", sub: "2025 Digital Women Awards" },
-              { icon: "🏆", title: "EIMA Marketer of the Year", sub: "2025 DFW Integrated Marketing Association" },
-              { icon: "🏆", title: "Digital Woman to Watch", sub: "2024 Digital Women Awards" },
-              { icon: "🏆", title: "Social Media Manager of the Year Runner Up", sub: "2024 Digital Women Awards" },
-              { icon: "⭐", title: "Dallas Meetup Featured Networker", sub: "Fall 2024" },
-              { icon: "⭐", title: "Named Social Media Marketing Expert", sub: "Featured in Huffpost" },
-            ].map((award, i) => (
-              <div key={i} className="rounded-2xl bg-cream p-6 ring-1 ring-espresso/5">
-                <div className="text-2xl mb-3">{award.icon}</div>
-                <h3 className="font-semibold text-espresso">{award.title}</h3>
-                <p className="text-sm text-espresso/50 mt-1">{award.sub}</p>
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {linkedinWins.map((win, i) => (
+              <div
+                key={i}
+                className="group flex items-start gap-3 rounded-2xl border border-gray-800 bg-gray-800/50 p-5 transition-all hover:border-pink-500/40 hover:bg-gray-800"
+              >
+                <span className="mt-0.5 flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-pink-500/20 text-xs text-pink-400">
+                  ✓
+                </span>
+                <p className="text-sm leading-relaxed text-gray-300">
+                  {win}
+                  {i === 3 && (
+                    <span className="ml-1 text-pink-400">
+                      (hi, Harvard! What, like it&apos;s hard?)
+                    </span>
+                  )}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="relative py-24 sm:py-32 overflow-hidden">
-        <div className="gradient-blob w-[500px] h-[500px] bg-blush-200 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" style={{ position: "absolute" }} />
-        <div className="relative mx-auto max-w-3xl px-6 lg:px-8 text-center">
-          <h2 className="font-display text-4xl sm:text-6xl tracking-tight text-espresso leading-tight">
-            Ready to own your personal brand?
-          </h2>
-          <p className="mt-6 text-lg text-espresso/60">
-            Let&rsquo;s make your profile <em className="font-display text-xl">impossible</em> to ignore. ⬇️
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link href="/contact" className="rounded-full bg-espresso px-8 py-3.5 text-sm font-semibold text-cream shadow-lg shadow-espresso/25 hover:bg-espresso/90 hover:shadow-xl hover:-translate-y-0.5 transition-all">
-              Let&rsquo;s chat ✨
-            </Link>
-            <Link href="/services" className="rounded-full px-8 py-3.5 text-sm font-semibold text-espresso ring-1 ring-espresso/15 hover:ring-espresso/30 hover:bg-white/50 transition-all">
-              View services →
-            </Link>
+      {/* ── Awards Grid ── */}
+      <section className="bg-gray-50">
+        <div className="mx-auto max-w-5xl px-6 py-20 sm:py-28">
+          <div className="text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-pink-500">
+              Receipts
+            </p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              Awards &amp; Recognition
+            </h2>
+          </div>
+
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {awards.map((award, i) => (
+              <div
+                key={i}
+                className="group relative overflow-hidden rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              >
+                <div
+                  className="absolute inset-0 opacity-0 transition-opacity group-hover:opacity-100"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, oklch(89.2% 0.058 10.001 / 0.15), transparent)",
+                  }}
+                />
+                <div className="relative">
+                  <span className="text-3xl">{award.icon}</span>
+                  <p className="mt-3 text-sm font-semibold leading-snug text-gray-900">
+                    {award.title}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
-    </>
+    </main>
   );
 }
