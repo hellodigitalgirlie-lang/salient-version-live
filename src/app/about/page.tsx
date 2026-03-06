@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
+import jessicaImg from "@/images/jessica.jpg";
 
 const awards = [
   { icon: "🏆", title: "Social Media Manager of the Year Finalist" },
@@ -27,7 +29,7 @@ export default function AboutPage() {
   }, []);
 
   return (
-    <main className="pt-24 pb-16">
+    <div className="pb-16">
       {/* ── Hero Section ── */}
       <section className="relative overflow-hidden bg-gray-50">
         <div
@@ -77,22 +79,21 @@ export default function AboutPage() {
       {/* ── Story Split Section ── */}
       <section className="mx-auto max-w-6xl px-6 py-20 sm:py-28">
         <div className="grid items-center gap-16 lg:grid-cols-2">
-          {/* Image placeholder */}
+          {/* Actual Image */}
           <div className="relative">
             <div
               className="absolute -inset-4 rounded-3xl opacity-40 blur-2xl"
               style={{ background: "oklch(89.2% 0.058 10.001)" }}
             />
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-gradient-to-br from-pink-100 via-rose-50 to-white shadow-xl">
-              <div className="flex h-full flex-col items-center justify-center p-8 text-center">
-                <span className="mb-3 text-6xl">💅</span>
-                <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
-                  Jessica
-                </p>
-                <p className="mt-1 text-xs text-gray-400">
-                  LinkedIn Consultant &amp; Brand Strategist
-                </p>
-              </div>
+            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl shadow-xl">
+              <Image
+                src={jessicaImg}
+                alt="Jessica - The Digital Girlie"
+                fill
+                className="object-cover object-center"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                priority
+              />
             </div>
           </div>
 
@@ -129,7 +130,7 @@ export default function AboutPage() {
               transform your profile into a tool that works for you.
             </p>
             <a
-              href="#"
+              href="/contact"
               className="mt-4 inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-pink-500/25 transition-all hover:-translate-y-0.5 hover:shadow-xl hover:shadow-pink-500/30"
               style={{ background: "oklch(89.2% 0.058 10.001)" }}
             >
@@ -229,6 +230,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

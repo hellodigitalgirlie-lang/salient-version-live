@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
+import jessicaImg from "@/images/jessica.jpg";
 
 const CheckSvg = ({ className }: { className?: string }) => (
   <svg className={className} viewBox="0 0 20 20" fill="currentColor">
@@ -93,11 +95,13 @@ export default function Page() {
             <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
               {/* Image side */}
               <div className="relative">
-                <div className="aspect-[4/5] overflow-hidden rounded-3xl bg-gray-200 shadow-2xl shadow-gray-900/10">
-                  <img
-                    src="https://images.squarespace-cdn.com/content/v1/684066d26fdac4230f2721d4/8d06e684-e3fd-43e7-8fc7-f63d9b2e5cf9/TDG+v2.jpg"
+                <div className="relative aspect-[4/5] overflow-hidden rounded-3xl bg-gray-200 shadow-2xl shadow-gray-900/10">
+                  <Image
+                    src={jessicaImg}
                     alt="Jessica - The Digital Girlie"
-                    className="size-full object-cover grayscale-[20%]" // Added slight grayscale to match the new chic aesthetic
+                    fill
+                    className="object-cover object-center grayscale-[20%]" 
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
                 {/* Floating badge */}
