@@ -128,7 +128,7 @@ export default function ServicesPage() {
                 </ul>
               </div>
               <a href="https://buy.stripe.com/7sY14gfj05E075ngqefnO01" className="mt-8 block rounded-full bg-[oklch(89.2%_0.058_10.001)] px-4 py-3 text-center text-sm font-semibold text-gray-900 shadow-lg hover:brightness-95 transition-all">
-                Book now ✨
+                Book now
               </a>
             </div>
 
@@ -190,7 +190,7 @@ export default function ServicesPage() {
           </h2>
           <p className="mt-4 text-gray-600">Let&rsquo;s chat and figure it out together.</p>
           <Link href="/contact" className="mt-8 inline-flex rounded-full bg-gray-900 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gray-900/20 hover:bg-gray-800 hover:-translate-y-0.5 transition-all">
-            Get in touch ✨
+            Get in touch
           </Link>
         </div>
       </section>

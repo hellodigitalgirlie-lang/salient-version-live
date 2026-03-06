@@ -108,7 +108,10 @@ export default function Navbar() {
             Blog
           </a>
         </PopoverGroup>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:gap-x-6">
+          <a href="/login" className="text-sm/6 font-semibold text-gray-900 hover:text-pink-500 transition-colors">
+            Client Login
+          </a>
           <a href="/contact" className="rounded-full bg-[oklch(89.2%_0.058_10.001)] px-5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:brightness-95 transition-all hover:-translate-y-0.5">
             Let's chat <span aria-hidden="true">&rarr;</span>
           </a>
@@ -166,6 +169,9 @@ export default function Navbar() {
                 </a>
                 <a href="/blog" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
                   Blog
+                </a>
+                <a href="#" className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">
+                  Client Login
                 </a>
               </div>
               <div className="py-6">

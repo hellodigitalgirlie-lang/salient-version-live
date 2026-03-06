@@ -227,7 +227,6 @@ export default function FreebiesPage() {
         />
 
         <div className="relative mx-auto max-w-2xl px-6 py-20 text-center sm:py-28">
-          <span className="text-4xl">✨</span>
           <h2 className="mt-4 text-3xl font-bold tracking-tight sm:text-4xl">
             Stay in the Loop
           </h2>
