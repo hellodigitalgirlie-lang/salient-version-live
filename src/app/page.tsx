@@ -61,7 +61,11 @@ export default function Page() {
                 className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 opacity-0"
                 style={{ animation: "fadeUp 0.8s ease-out 0.3s forwards" }}
               >
-                <a href="#pricing" className="rounded-full bg-gray-900 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gray-900/20 hover:bg-gray-800 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                <a href="#pricing" className="inline-flex items-center gap-3 rounded-full bg-gray-900 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-gray-900/20 hover:bg-gray-800 hover:shadow-xl hover:-translate-y-0.5 transition-all">
+                  <span className="relative flex h-3 w-3">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-pink-400 opacity-75"></span>
+                    <span className="relative inline-flex h-3 w-3 rounded-full bg-pink-500"></span>
+                  </span>
                   View packages →
                 </a>
                 <a href="#about" className="group rounded-full px-8 py-3.5 text-sm font-semibold text-gray-900 ring-1 ring-gray-200 hover:ring-gray-300 hover:bg-gray-50 transition-all">

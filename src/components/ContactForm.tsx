@@ -23,7 +23,7 @@ export default function ContactForm() {
                 <div className="w-12 h-12 rounded-xl bg-[oklch(89.2%_0.058_10.001)]/40 flex items-center justify-center text-xl flex-none ring-1 ring-[oklch(89.2%_0.058_10.001)]">📧</div>
                 <div>
                   <h3 className="text-base font-semibold text-gray-900">Email me</h3>
-                  <p className="text-sm text-gray-600 mt-1">hello@thedigitalgirlie.com</p>
+                  <p className="text-sm text-gray-600 mt-1">hellodigitalgirlie@gmail.com</p>
                 </div>
               </div>
               <div className="flex gap-4 items-start">
