@@ -1,88 +1,52 @@
-import Image from 'next/image'
-
-import { Container } from '@/components/Container'
-import backgroundImage from '@/images/background-faqs.jpg'
-
 const faqs = [
   [
     {
-      question: 'Does TaxPal handle VAT?',
-      answer:
-        'Well no, but if you move your company offshore you can probably ignore it.',
+      question: 'Who is this for?',
+      answer: "Whether you're a student starting out, a mid-career professional looking to pivot, or an executive wanting to strengthen your brand, I work with professionals at every stage.",
     },
     {
-      question: 'Can I pay for my subscription via purchase order?',
-      answer: 'Absolutely, we are happy to take your money in all forms.',
-    },
-    {
-      question: 'How do I apply for a job at TaxPal?',
-      answer:
-        'We only hire our customers, so subscribe for a minimum of 6 months and then let’s talk.',
+      question: 'What makes you different from other LinkedIn coaches?',
+      answer: "I don't just teach LinkedIn strategy. I live it. With 15+ years in digital marketing and a track record of using LinkedIn to land jobs, win awards, and gain access to conferences, my advice comes from real experience, not theory.",
     },
   ],
   [
     {
-      question: 'What was that testimonial about tax fraud all about?',
-      answer:
-        'TaxPal is just a software application, ultimately your books are your responsibility.',
+      question: 'How long does the full optimization take?',
+      answer: "Typically 5–7 business days from our initial strategy session. You'll receive your complete profile package with one round of revisions included.",
     },
     {
-      question:
-        'TaxPal sounds horrible but why do I still feel compelled to purchase?',
-      answer:
-        'This is the power of excellent visual design. You just can’t resist it, no matter how poorly it actually functions.',
-    },
-    {
-      question:
-        'I found other companies called TaxPal, are you sure you can use this name?',
-      answer:
-        'Honestly not sure at all. We haven’t actually incorporated or anything, we just thought it sounded cool and made this website.',
+      question: 'Can I just book a call to pick your brain?',
+      answer: "Absolutely! The LinkedIn Power Hour ($250) is designed exactly for that—a focused session where we can tackle whatever you need, from strategy to live profile edits.",
     },
   ],
   [
     {
-      question: 'How do you generate reports?',
-      answer:
-        'You just tell us what data you need a report for, and we get our kids to create beautiful charts for you using only the finest crayons.',
-    },
-    {
-      question: 'Can we expect more inventory features?',
-      answer: 'In life it’s really better to never expect anything at all.',
-    },
-    {
-      question: 'I lost my password, how do I get into my account?',
-      answer:
-        'Send us an email and we will send you a copy of our latest password spreadsheet so you can find your information.',
+      question: 'Do I need to be active on LinkedIn already?',
+      answer: "Not at all! Whether you have a blank profile or one that just needs a refresh, I'll meet you where you are and build from there.",
     },
   ],
 ]
 
-export function Faqs() {
+export default function FaqSection() {
   return (
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="relative overflow-hidden bg-slate-50 py-20 sm:py-32"
+      className="relative overflow-hidden bg-white py-20 sm:py-32"
     >
-      <Image
-        className="absolute top-0 left-1/2 max-w-none translate-x-[-30%] -translate-y-1/4"
-        src={backgroundImage}
-        alt=""
-        width={1558}
-        height={946}
-        unoptimized
-      />
-      <Container className="relative">
+      {/* Background Blob */}
+      <div className="absolute w-[500px] h-[500px] rounded-full blur-[80px] opacity-30 bg-[oklch(89.2%_0.058_10.001)] -top-40 right-20" />
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2
             id="faq-title"
-            className="font-display text-3xl tracking-tight text-slate-900 sm:text-4xl"
+            className="font-serif text-3xl tracking-tight text-gray-900 sm:text-4xl"
           >
             Frequently asked questions
           </h2>
-          <p className="mt-4 text-lg tracking-tight text-slate-700">
-            If you can’t find what you’re looking for, email our support team
-            and if you’re lucky someone will get back to you.
+          <p className="mt-4 text-lg text-gray-600">
+            If you can’t find what you’re looking for, feel free to drop me a message through the contact form below.
           </p>
         </div>
         <ul
@@ -94,17 +58,17 @@ export function Faqs() {
               <ul role="list" className="flex flex-col gap-y-8">
                 {column.map((faq, faqIndex) => (
                   <li key={faqIndex}>
-                    <h3 className="font-display text-lg/7 text-slate-900">
+                    <h3 className="font-semibold text-lg/7 text-gray-900">
                       {faq.question}
                     </h3>
-                    <p className="mt-4 text-sm text-slate-700">{faq.answer}</p>
+                    <p className="mt-4 text-sm text-gray-600">{faq.answer}</p>
                   </li>
                 ))}
               </ul>
             </li>
           ))}
         </ul>
-      </Container>
+      </div>
     </section>
   )
 }
