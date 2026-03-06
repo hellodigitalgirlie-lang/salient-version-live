@@ -107,8 +107,15 @@ export default function Footer() {
         
         {/* Bottom Status & Copyright */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-gray-200 pt-8 sm:flex-row sm:mt-20 lg:mt-24">
-          <p className="text-sm text-gray-500 font-medium">📍 Based in Dallas, TX <span className="mx-2 hidden sm:inline">&bull;</span><span className="block sm:inline mt-1 sm:mt-0">🗓️ Currently booking for next month</span></p>
-          <p className="text-sm text-gray-400">&copy; {new Date().getFullYear()} The Digital Girlie. All rights reserved.</p>
+          <p className="text-sm text-gray-500 font-medium text-center sm:text-left">
+            📍 Based in Dallas, TX <span className="mx-2 hidden sm:inline">&bull;</span><span className="block sm:inline mt-1 sm:mt-0">🗓️ Currently booking for next month</span>
+          </p>
+          <div className="flex flex-col items-center sm:items-end gap-1">
+            <p className="text-sm text-gray-400 text-center sm:text-right">&copy; {new Date().getFullYear()} The Digital Girlie. All rights reserved.</p>
+            <p className="text-xs text-gray-400">
+              Powered by <a href="https://marginmedia.co" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 font-medium transition-colors">MarginMedia</a>
+            </p>
+          </div>
         </div>
       </div>
     </footer>
